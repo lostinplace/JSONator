@@ -14,38 +14,21 @@
         }    
     </script>
     <script type="text/javascript">
-        function engine() {
-            var parent;
-            ProcessObject(anObject){
-                var objType =typeof(anObject),
-                    tmpOutput=$('<div class="ValueDiv"/>');
-                switch(objType){
-                    case "string":
-                    case "number":
-                    case "boolean":
-                        $('<input/>').attr('name',parent.find)
-                        break;
-                    case "object":
-                    case "array":
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-        $(engine);
+       
     </script>
 </head>
 
 <body>
     <aside>
         <span>
-            object:  properties names are label enclosed span and input.  input has the name propName and span is fixed to output of propName.
-                     between propName div and value div there is a colon character
-                     valueDiv contains an input of name fixed to propName and a Div containing the rendered output of the value
-            array:   valueDiv contains an input with value of element and a div containing the rendered output of the
-            boolean: valueDiv contains a checkbox
-            date:    ???
+            object:     properties names are label enclosed span and input.  input has the name propName and span is fixed to output of propName.
+                        between propName div and value div there is a colon character
+                        valueDiv contains an input of name fixed to propName and a Div containing the rendered output of the value
+            array:      valueDiv contains an input with value of element and a div containing the rendered output of the
+            boolean:    valueDiv contains a checkbox
+            date:       ???
+            string/
+            int:        valuediv contains input of name given to associated propName or "element"
         </span>
     </aside>
     <div class="sample">
@@ -53,11 +36,30 @@
             <div class="RenderedObjectProperty">
                 <label>
                     <span>a</span>
-                    <input name="propName" />
+                    <input name="propName" value="a" />
                 </label>:
                 <div class="ValueDiv">
                     <input name="a"  value="1"/>
-                    <div class="RenderedDiv"></div>
+                </div>
+            </div>
+            <div class="RenderedObjectProperty">
+                <label>
+                    <span>b</span>
+                    <input name="propName" value="b" />
+                </label>:
+                <div class="ValueDiv">
+                    <input name="b"  value="[1,2,3]"/>
+                    <div class="RenderedDiv">
+                        <div class="ValueDiv">
+                            <input name="b[0]" value="1" />
+                        </div>
+                        <div class="ValueDiv">
+                            <input name="b[1]" value="2" />
+                        </div>
+                        <div class="ValueDiv">
+                            <input name="b[2]" value="3" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
