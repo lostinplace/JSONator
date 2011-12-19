@@ -15,9 +15,22 @@
     </script>
     <script type="text/javascript">
         function engine() {
+            var parent;
             ProcessObject(anObject){
-                var objType =typeof(anObject);
-                switch
+                var objType =typeof(anObject),
+                    tmpOutput=$('<div class="ValueDiv"/>');
+                switch(objType){
+                    case "string":
+                    case "number":
+                    case "boolean":
+                        $('<input/>').attr('name',parent.find)
+                        break;
+                    case "object":
+                    case "array":
+                        break;
+                    default:
+                        break;
+                }
             }
         }
         $(engine);
@@ -30,8 +43,24 @@
             object:  properties names are label enclosed span and input.  input has the name propName and span is fixed to output of propName.
                      between propName div and value div there is a colon character
                      valueDiv contains an input of name fixed to propName and a Div containing the rendered output of the value
-            array:   
+            array:   valueDiv contains an input with value of element and a div containing the rendered output of the
+            boolean: valueDiv contains a checkbox
+            date:    ???
         </span>
     </aside>
+    <div class="sample">
+        <div class="RenderedDiv">
+            <div class="RenderedObjectProperty">
+                <label>
+                    <span>a</span>
+                    <input name="propName" />
+                </label>:
+                <div class="ValueDiv">
+                    <input name="a"  value="1"/>
+                    <div class="RenderedDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
