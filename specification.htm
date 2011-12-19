@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <section id="spec">
+        <ul>
+            <li>
+                <article>
+                    <h1>object<input type="checkbox" value="implemented" disabled/></h1>
+                    <ul>
+                        <li>
+                            contains an input with the full value of the object
+                            <input type="checkbox" value="implemented" checked disabled />
+                        </li>
+                        <li>
+                            contains a ul with a list of all the object properties
+                            <ul>
+                                <li>
+                                    each object property has a label-enclosed input with a name that indicates the key-index of the property and a value indicating the keyname
+                                </li>
+                                <li>
+                                    
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            each Property has class ObjectProperty
+                            <input type="checkbox" value="implemented" disabled />
+                        </li>
+                        <li>
+                            properties names are label enclosed span and input.
+                        </li>
+                        <li>
+                            input has the name propName and span is fixed to output of propName.
+                        </li>
+                        <li>
+                            between propName div and value div there is a colon character.
+                        </li>
+                    </ul>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h1>array</h1>
+                    <input type="checkbox"  disabled value="implemented" />
+                    <ul>
+                        <li>
+                            div has class RenderedArray
+                        </li>
+                        <li>
+                            contains hidden input named after the array's index in the containing object with the stringified contents of the array
+                        </li>
+                        <li>
+                            contains an ol of class "ArrayContents" with an li for each item in the array
+                        </li>
+                    </ul>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h1>value type</h1>
+                    <ul>
+                        <li>
+                            div has class "Value"
+                        </li>
+                        <li>
+                            contains hidden input named after the array's index in the containing object with the the value
+                        </li>
+                        <li>
+                            <h2>string</h2>
+                            input has type "text"
+                        </li>
+                        <li>
+                            <h2>number</h2>
+                            input has type "number"
+                        </li>
+                        <li>
+                            <h2>boolean</h2>
+                            input has type "checkbox", checked property is set if value is true, value property is the value
+                        </li>
+                    </ul>
+                </article>
+            </li>
+
+        </ul>
+        <span>
+            object:     properties names are label enclosed span and input.  input has the name propName and span is fixed to output of propName.
+                        between propName div and value div there is a colon character
+                        valueDiv contains an input of name fixed to propName and a Div containing the rendered output of the value
+            array:      valueDiv contains an input with value of element and a div containing the rendered output of the
+            boolean:    valueDiv contains a checkbox
+            date:       ???
+            string/
+            int:        valuediv contains input of name given to associated propName or "element"
+        </span>
+
+    </section>
+
+</body>
+</html>
